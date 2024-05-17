@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Flask App</title>
+</head>
+<body>
+   
+    <div>
+        <div>
+            {% if val == True %}
+            <div>You Can purchaes Read articles Below</div>
+            {% else %}
+            <div>You Can not purchaes Read articles Below</div>
+            {% endif %}
+        </div>
+        <h1>{{ stockname }} found </h1>
+        <a href="/">Return</a>
+        <ul>
+
+            {% for stocknew in list_of_objects %}
+            <br>
+            <li>{{ stocknew.title }}.  publised on <b>{{ stocknew.date }}</b></li>
+            {% endfor %}
+            <br>
+        </ul>
+    </div>
+</body>
+</html>

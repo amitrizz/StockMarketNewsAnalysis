@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Flask App</title>
+    <style>
+      .main {
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        overflow-x: hidden;
+      }
+      form {
+        width: 30%;
+        height: 20vh;
+        background: #3b383d9d;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: space-around;
+      }
+      input {
+        background: transparent;
+        font-size: 15px;
+        font-weight: 700;
+        border-bottom: 1px solid green;
+        border-left: 1px solid green;
+        border-top: none;
+        border-radius: 3px;
+        border-right: none;
+        padding: 5px;
+        outline: none;
+      }
+      input:focus {
+        border-bottom: 2px solid green;
+        border-left: 2px solid green;
+      }
+      button{
+        background: #7f9cfc;
+        border: 1px solid rgba(245, 222, 179, 0.219);
+        font-size: 18px;
+        font-weight: 700;
+        padding: 5px;
+        transition: background 0.5s ease-in;
+      }
+      button:hover{
+        background: #2556f8;
+        border: 1px solid rgba(250, 209, 132, 0.219);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <form action="/stock" method="post">
+        <input type="text" name="stock" id="stock" />
+        <button type="submit">Check Stock</button>
+      </form>
+    </div>
+  </body>
+</html>
